@@ -3,9 +3,13 @@ from preprocessing import preprocess_text
 from common import MODEL_PATH, VECTORIZER_PATH
 
 def load_model(model_path, vectorizer_path):
-    model = joblib.load(model_path)
-    vectorizer = joblib.load(vectorizer_path)
-    return model, vectorizer
+    try:
+        model = joblib.load(model_path)
+        vectorizer = joblib.load(vectorizer_path)
+        return model, vectorizer
+    except Exception as e:
+        print(f"Lỗi khi tải mô hình: {e}")
+        return None, None
 
 def predict(model, vectorizer, text):
     """
@@ -24,9 +28,9 @@ if __name__ == "__main__":
     model, vectorizer = load_model(MODEL_PATH, VECTORIZER_PATH)
 
     if model is not None and vectorizer is not None:
-        email_text = input("Nhập tin nhắn để dự đoán: ")
-        result = predict(model, vectorizer, email_text)
-        print(f"Tin nhắn được phân loại là: {result}")
+        # Ví dụ về cách sử dụng hàm predict
+        email_text = "Subject: Important: Verify Your Bank Account Dear Customer, Your account has been locked due to suspicious activity. Please click the link below to verify your account immediately: [Fake Link] Failure to do so may result in account deactivation."
+        prediction = predict(model, vectorizer, email_text)
+        print(f"Dự đoán: {prediction}")
     else:
-        print("Không thể tải mô hình hoặc vectorizer.")
-
+        print("Không thể tải mô hình và vectorizer.")

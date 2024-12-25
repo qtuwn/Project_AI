@@ -5572,3 +5572,34 @@ ham	Will ü b going to esplanade fr home?
 ham	Pity, * was in mood for that. So...any other suggestions?
 ham	The guy did some bitching but I acted like i'd be interested in buying something else next week and he gave it to us for free
 ham	Rofl. Its true to its name
+ham	(**update**: Oct 21 2002 jm: added nearly 3000 more messages.)
+ham	(**update**: Nov 24 2002 jm: removed Replied: and Forwarded: headers.)
+ham	(**update**: Dec  4 2002 jm: removed a German message, some left-over SpamAssassin markup, and quite a few duplicate messages. Also replaced header obfuscation using "example.com" with "spamassassin.taint.org", since example.com has no MX record.)
+ham	(**update**: Feb 28 2003 jm: Bob Dickinson reported some leftover markup that should have been removed from the headers. Now cleaned.)
+ham	(**update**: Apr 23 2003 jm: removed 3 messages with malicious Javascript)
+ham	(**update**: Oct 10 2003 jm: noted that we'd love to hear about papers ;)
+ham	(**update**: Dec 16 2004 jm: changed a couple of hostnames in headers, in 20021010*/hard_ham/0198* and 20030228*/hard_ham/00230*.)
+ham	(**update**: Mar  2 2005 jm: added note about live testing)
+ham	(**update**: Mar 11 2005 jm: removed a listed-as-spam mail that was really a misclassified non-spam, namely '00529.0c8a07bb7b14576063ba0c1c4079e209' in 'spam_2'.)
+ham	(**update**: Jan 31 2006 jm: added note about "www.countermoon.com")
+ham	***** IMPORTANT: Do Not Use These Mails For Testing a Live System ******
+ham	Please note: do NOT send these emails into a live email system. I've received several complaints from my correspondents that they've received bounce messages in response to mails in this corpus, due to misconfigured *LIVE* email systems being tested against this public corpus!
+ham	I'm offering this as a service to spam filter developers, and causing trouble for my acquaintances and various mailing list administrators does NOT incline me to continue offering this data publically.
+ham	Welcome to the SpamAssassin public mail corpus. This is a selection of mail messages, suitable for use in testing spam filtering systems. Pertinent points:
+ham	- All headers are reproduced in full. Some address obfuscation has taken place, and hostnames in some cases have been replaced with "spamassassin.taint.org" (which has a valid MX record). In most cases though, the headers appear as they were received.
+ham	- All of these messages were posted to public fora, were sent to me in the knowledge that they may be made public, were sent by me, or originated as newsletters from public news web sites.
+ham	- relying on data from public networked blacklists like DNSBLs, Razor, DCC or Pyzor for identification of these messages is not recommended, as a previous downloader of this corpus might have reported them!
+ham	- Copyright for the text in the messages remains with the original senders.
+ham	OK, now onto the corpus description. It's split into three parts, as follows:
+ham	- spam: 500 spam messages, all received from non-spam-trap sources.
+ham	- easy_ham: 2500 non-spam messages. These are typically quite easy to differentiate from spam, since they frequently do not contain any spammish signatures (like HTML etc).
+ham	- hard_ham: 250 non-spam messages which are closer in many respects to typical spam: use of HTML, unusual HTML markup, coloured text, "spammish-sounding" phrases etc.
+ham	- easy_ham_2: 1400 non-spam messages. A more recent addition to the set.
+ham	- spam_2: 1397 spam messages. Again, more recent.
+ham	Total count: 6047 messages, with about a 31% spam ratio.
+ham	The corpora are prefixed with the date they were assembled. They are compressed using "bzip2". The messages are named by a message number and their MD5 checksum.
+ham	The "obsolete" dir contains old versions of the corpus, for reference, in case you need to correlate test results using these older versions against the source messages. The messages in those corpora are generally included in the fresher corpora.
+ham	This corpus lives at http://spamassassin.apache.org/publiccorpus/. Mail jm - public - corpus AT jmason dot org if you have questions.
+ham	Note: if you write a paper or similar using this corpus, and it's available for download, we'd love to hear about it! Mail users AT spamassassin dot apache dot org. cheers!
+ham	UPDATE: Jan 31 2006 jm: I've received a mail saying 'I'm seeing 41 messages [from the ham corpus] with the URL "www.countermoon.com" hit on SURBL. Looks like the domain changed may have changed hands at some point.' So again, live lookups will probably now produce different results from what would have been seen at time of first email receipt; be warned.																																				
+
