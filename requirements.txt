@@ -1,0 +1,8 @@
+pandas
+scikit-learn
+nltk
+joblib
+matplotlib
+seaborn
+nltk==3.5
+keyring

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Filter</title>
+</head>
+<body>
+    <h1>Spam Filter App</h1>
+    <form method="POST" action="/predict">
+        <label for="email_text">Nhập nội dung email:</label><br>
+        <textarea id="email_text" name="email_text" rows="5" cols="50"></textarea><br>
+        <input type="submit" value="Dự đoán">
+    </form>
+    {% if prediction %}
+        <h2>Kết quả:</h2>
+        <p><strong>Nội dung:</strong> {{ email_text }}</p>
+        <p><strong>Dự đoán:</strong> {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
